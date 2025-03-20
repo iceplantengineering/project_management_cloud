@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クラウドベースプロジェクト管理統合システム開発計画</title>
+    <meta name="description" content="自動車エンジニアリング部門向けプロジェクト管理クラウド導入計画のプレゼンテーション">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ナビゲーションバー -->
+    <nav id="main-nav">
+        <div class="container">
+            <div class="logo">
+                <h1>クラウド統合システム</h1>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link active">ホーム</a></li>
+                <li><a href="#summary" class="nav-link">エグゼクティブサマリー</a></li>
+                <li><a href="#current-state" class="nav-link">現状分析</a></li>
+                <li><a href="#necessity" class="nav-link">導入必要性</a></li>
+                <li><a href="#features" class="nav-link">機能と特徴</a></li>
+                <li><a href="#benefits" class="nav-link">メリットと効果</a></li>
+                <li><a href="#roadmap" class="nav-link">ロードマップ</a></li>
+                <li><a href="#architecture" class="nav-link">技術要件</a></li>
+                <li><a href="#investment" class="nav-link">投資計画</a></li>
+                <li><a href="#risk" class="nav-link">リスク管理</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 進捗インジケーター -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <!-- トップに戻るボタン -->
+    <button id="back-to-top" title="トップに戻る">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ヒーローセクション -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-aos="fade-up">クラウドベース<br>プロジェクト管理統合システム</h1>
+                <h2 data-aos="fade-up" data-aos-delay="200">エンジニアリング会社向け次世代ソリューション</h2>
+                <a href="#summary" class="btn btn-primary cta-button pulse" data-aos="fade-up" data-aos-delay="400">詳細を見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- エグゼクティブサマリー -->
+    <section id="summary" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>エグゼクティブサマリー</h2>
+                <p>大規模プロジェクト管理の効率を劇的に改善</p>
+            </div>
+            <div class="summary-grid">
+                <div class="summary-text" data-aos="fade-right" data-aos-delay="200">
+                    <h3>プロジェクト概要と目的</h3>
+                    <p>自動車産業におけるエンジニアリング業務のためのクラウドベースプロジェクト管理統合システムの開発計画です。データサイロ化、レガシーシステム、リモートワーク対応、リアルタイム性の欠如などの課題を解決し、プロジェクト効率を向上させることを目的としています。</p>
+                    
+                    <h3>これまでの経緯</h3>
+                    <p>2022年より社内のデジタルトランスフォーメーション推進の一環として検討を開始し、以下のステップを経て現在に至ります：</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> 現行システムの課題分析とニーズ調査（2022年4月〜8月）</li>
+                        <li><i class="fas fa-check-circle"></i> 複数のソリューション比較検討（2022年9月〜12月）</li>
+                        <li><i class="fas fa-check-circle"></i> パイロットプロジェクトでの検証（2023年1月〜6月）</li>
+                        <li><i class="fas fa-check-circle"></i> 導入計画と投資対効果の詳細分析（2023年7月〜12月）</li>
+                        <li><i class="fas fa-arrow-circle-right"></i> 全社展開計画の策定と承認フェーズ（現在）</li>
+                    </ul>
+                    
+                    <h3>現状と次のステップ</h3>
+                    <p>パイロット部門では導入後6ヶ月で業務効率が32%向上し、主要なKPIでも大幅な改善が見られました。全社展開により更なる相乗効果が期待されます。次のステップは経営陣の最終承認とプロジェクト実行予算の確保です。</p>
+                </div>
+                <div class="metrics-container" data-aos="fade-left" data-aos-delay="400">
+                    <div class="metrics-header">
+                        <h3>主要KPI改善見込み</h3>
+                    </div>
+                    <div class="metric-cards">
+                        <div class="metric-card" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="metric-value counter" data-target="45">0</div>
+                            <div class="metric-label">プロジェクト時間削減率（%）</div>
+                        </div>
+                        <div class="metric-card" data-aos="zoom-in" data-aos-delay="700">
+                            <div class="metric-value counter" data-target="68">0</div>
+                            <div class="metric-label">情報アクセス速度向上（%）</div>
+                        </div>
+                        <div class="metric-card" data-aos="zoom-in" data-aos-delay="800">
+                            <div class="metric-value counter" data-target="387">0</div>
+                            <div class="metric-label">5年間ROI（%）</div>
+                        </div>
+                        <div class="metric-card" data-aos="zoom-in" data-aos-delay="900">
+                            <div class="metric-value counter" data-target="18">0</div>
+                            <div class="metric-label">投資回収期間（ヶ月）</div>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="roiSummaryChart"></canvas>
+                        <div class="chart-caption">年間 約5,650万円のコスト削減効果</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 現状分析と課題 -->
+    <section id="challenges" class="section bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>現状分析と課題</h2>
+                <p>現行システムの課題と業界動向</p>
+            </div>
+            
+            <div class="comparison-container" data-aos="fade-up" data-aos-delay="200">
+                <h3>現行システムのパフォーマンス評価</h3>
+                <div class="chart-container">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+                <p class="chart-note">パイロット部門での評価結果に基づく10点満点の評価</p>
+            </div>
+            
+            <div class="challenges" data-aos="fade-up" data-aos-delay="600">
+                <h3>主要な課題</h3>
+                <div class="challenge-cards">
+                    <div class="challenge-card">
+                        <i class="fas fa-database"></i>
+                        <h4>データサイロ化</h4>
+                        <p>部門間でのデータ共有が困難で、情報の分断が発生している</p>
+                    </div>
+                    <div class="challenge-card">
+                        <i class="fas fa-server"></i>
+                        <h4>レガシーシステム</h4>
+                        <p>古いシステムの維持コストが高く、拡張性に欠ける</p>
+                    </div>
+                    <div class="challenge-card">
+                        <i class="fas fa-users"></i>
+                        <h4>リモートワーク対応</h4>
+                        <p>分散チームでの効率的な協業が困難</p>
+                    </div>
+                    <div class="challenge-card">
+                        <i class="fas fa-clock"></i>
+                        <h4>リアルタイム性の欠如</h4>
+                        <p>プロジェクト状況の把握に時間がかかり、迅速な意思決定ができない</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comparison-container" data-aos="fade-up" data-aos-delay="400">
+                <h3>競合他社との比較分析</h3>
+                <div class="chart-container">
+                    <canvas id="competitorRadar"></canvas>
+                </div>
+                <p class="chart-note">2023年第4四半期の業界ベンチマーク調査に基づく</p>
+            </div>
+            
+            <div class="current-status" data-aos="fade-up" data-aos-delay="800">
+                <h3>最新の進捗状況</h3>
+                <div class="status-grid">
+                    <div class="status-item">
+                        <div class="status-icon completed">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="status-content">
+                            <h4>要件定義</h4>
+                            <p>全部門へのヒアリングとニーズ分析完了（2023年2月）</p>
+                        </div>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-icon completed">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="status-content">
+                            <h4>ベンダー選定</h4>
+                            <p>主要3社による比較評価を実施し最適ソリューションを特定（2023年5月）</p>
+                        </div>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-icon in-progress">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                        <div class="status-content">
+                            <h4>パイロット実装</h4>
+                            <p>設計部門でのパイロット運用実施中（80%完了）</p>
+                            <div class="progress-small">
+                                <div class="progress-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-icon pending">
+                            <i class="fas fa-hourglass-half"></i>
+                        </div>
+                        <div class="status-content">
+                            <h4>予算承認</h4>
+                            <p>全社展開に向けた予算承認プロセス進行中（2024年1Q予定）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- システム導入の必要性 -->
+    <section id="necessity" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>システム導入の必要性</h2>
+                <p>なぜ今、クラウドベースの統合システムが必要なのか</p>
+            </div>
+            <div class="necessity-container">
+                <div class="necessity-grid">
+                    <div class="necessity-chart" data-aos="fade-right" data-aos-delay="200">
+                        <h3>自動車産業におけるデジタル化トレンド</h3>
+                        <canvas id="digitalTrendChart"></canvas>
+                    </div>
+                    <div class="necessity-pie" data-aos="fade-left" data-aos-delay="400">
+                        <h3>リモートワーク環境下での課題分布</h3>
+                        <canvas id="remoteChallengesPie"></canvas>
+                    </div>
+                </div>
+                <div class="necessity-flow" data-aos="fade-up" data-aos-delay="600">
+                    <h3>デジタルトランスフォーメーションの流れ</h3>
+                    <div class="flow-chart">
+                        <div class="flow-item">
+                            <div class="flow-icon">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <div class="flow-text">
+                                <h4>過去</h4>
+                                <p>オンプレミス<br>孤立したシステム</p>
+                            </div>
+                        </div>
+                        <div class="flow-arrow">
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                        </div>
+                        <div class="flow-item">
+                            <div class="flow-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="flow-text">
+                                <h4>現在</h4>
+                                <p>ハイブリッド環境<br>部分的統合</p>
+                            </div>
+                        </div>
+                        <div class="flow-arrow">
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                        </div>
+                        <div class="flow-item">
+                            <div class="flow-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="flow-text">
+                                <h4>未来</h4>
+                                <p>フルクラウド<br>完全統合システム</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 提案システムの機能と特徴 -->
+    <section id="features" class="section bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>提案システムの機能と特徴</h2>
+                <p>統合プラットフォームが提供する主要機能</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>プロジェクト管理</h3>
+                    <p>ガントチャート、カンバンボード、WBSなど複数の管理手法に対応したプロジェクト管理機能</p>
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="プロジェクト管理画面">
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>リソース管理</h3>
+                    <p>人材、設備、予算などのリソースを最適に配分し、稼働状況をリアルタイムで可視化</p>
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="リソース管理画面">
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>文書管理</h3>
+                    <p>バージョン管理、承認ワークフロー、全文検索機能を備えた統合文書管理システム</p>
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="文書管理画面">
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>コミュニケーション</h3>
+                    <p>チャット、ビデオ会議、タスクコメントなど、コンテキストに応じたコミュニケーションツール</p>
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="コミュニケーション画面">
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>データ分析・レポート</h3>
+                    <p>カスタマイズ可能なダッシュボードとレポート機能で、プロジェクトの健全性を常に把握</p>
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="データ分析画面">
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>セキュリティ</h3>
+                    <p>ロールベースのアクセス制御、監査ログ、暗号化によるエンタープライズレベルのセキュリティ</p>
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="セキュリティ設定画面">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 導入によるメリットと効果 -->
+    <section id="benefits" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>導入によるメリットと効果</h2>
+                <p>システム導入がもたらす具体的な効果</p>
+            </div>
+            <div class="benefits-container">
+                <div class="benefits-grid">
+                    <div class="benefit-chart" data-aos="fade-right" data-aos-delay="200">
+                        <h3>業務効率化の数値</h3>
+                        <canvas id="efficiencyChart"></canvas>
+                        <div class="benefit-metrics">
+                            <div class="benefit-metric-card">
+                                <div class="benefit-metric-value">55%</div>
+                                <div class="benefit-metric-label">全体的な業務効率化</div>
+                            </div>
+                            <div class="benefit-metric-card">
+                                <div class="benefit-metric-value">72時間/月</div>
+                                <div class="benefit-metric-label">削減時間</div>
+                            </div>
+                            <div class="benefit-metric-card">
+                                <div class="benefit-metric-value">32%</div>
+                                <div class="benefit-metric-label">コミュニケーション改善</div>
+                            </div>
+                            <div class="benefit-metric-card">
+                                <div class="benefit-metric-value">28%</div>
+                                <div class="benefit-metric-label">エラー率低減</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-chart" data-aos="fade-left" data-aos-delay="400">
+                        <h3>コスト削減の内訳</h3>
+                        <canvas id="costReductionChart"></canvas>
+                        <div class="cost-summary">
+                            <div class="cost-item">
+                                <div class="cost-value">2,000万円</div>
+                                <div class="cost-label">年間削減額</div>
+                            </div>
+                            <div class="cost-item">
+                                <div class="cost-value">18ヶ月</div>
+                                <div class="cost-label">投資回収期間</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comparison-table" data-aos="fade-up" data-aos-delay="600">
+                <h3>Before / After 比較</h3>
+                <div class="table-responsive">
+                    <table class="comparison">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>Before（現行システム）</th>
+                                <th>After（提案システム）</th>
+                                <th>改善効果</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>プロジェクト計画時間</td>
+                                <td>平均5日</td>
+                                <td>平均2日</td>
+                                <td class="improvement">60% 短縮 <i class="fas fa-arrow-up"></i></td>
+                            </tr>
+                            <tr>
+                                <td>文書検索時間</td>
+                                <td>平均15分</td>
+                                <td>平均30秒</td>
+                                <td class="improvement">97% 短縮 <i class="fas fa-arrow-up"></i></td>
+                            </tr>
+                            <tr>
+                                <td>会議時間</td>
+                                <td>週平均8時間</td>
+                                <td>週平均4.5時間</td>
+                                <td class="improvement">44% 短縮 <i class="fas fa-arrow-up"></i></td>
+                            </tr>
+                            <tr>
+                                <td>レポート作成</td>
+                                <td>手動（約3時間/週）</td>
+                                <td>自動生成（約10分/週）</td>
+                                <td class="improvement">94% 短縮 <i class="fas fa-arrow-up"></i></td>
+                            </tr>
+                            <tr>
+                                <td>リソース稼働率</td>
+                                <td>平均65%</td>
+                                <td>平均85%</td>
+                                <td class="improvement">31% 向上 <i class="fas fa-arrow-up"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 導入・展開計画（ロードマップ） -->
+    <section id="roadmap" class="section bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>導入・展開計画（ロードマップ）</h2>
+                <p>段階的な実装と展開のスケジュール</p>
+            </div>
+            <div class="roadmap-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="roadmap">
+                    <div class="roadmap-item">
+                        <div class="roadmap-date">Phase 1<br><span>1-2ヶ月目</span></div>
+                        <div class="roadmap-content">
+                            <h3>要件定義・設計</h3>
+                            <ul>
+                                <li>詳細要件の確定</li>
+                                <li>システムアーキテクチャ設計</li>
+                                <li>データ移行計画の策定</li>
+                                <li>主要ステークホルダーの承認</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-date">Phase 2<br><span>3-4ヶ月目</span></div>
+                        <div class="roadmap-content">
+                            <h3>基盤構築・開発</h3>
+                            <ul>
+                                <li>クラウド環境の構築</li>
+                                <li>コアモジュールの開発</li>
+                                <li>認証・セキュリティ実装</li>
+                                <li>APIインターフェース開発</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-date">Phase 3<br><span>5-6ヶ月目</span></div>
+                        <div class="roadmap-content">
+                            <h3>パイロット導入</h3>
+                            <ul>
+                                <li>テスト環境での検証</li>
+                                <li>パイロット部門での試験運用</li>
+                                <li>フィードバック収集と改善</li>
+                                <li>トレーニング資料の作成</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-date">Phase 4<br><span>7-9ヶ月目</span></div>
+                        <div class="roadmap-content">
+                            <h3>全社展開</h3>
+                            <ul>
+                                <li>段階的な全社展開</li>
+                                <li>ユーザートレーニングの実施</li>
+                                <li>レガシーシステムからの移行</li>
+                                <li>運用体制の確立</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-date">Phase 5<br><span>10-12ヶ月目</span></div>
+                        <div class="roadmap-content">
+                            <h3>最適化・拡張</h3>
+                            <ul>
+                                <li>パフォーマンス最適化</li>
+                                <li>追加機能の開発</li>
+                                <li>外部システム連携の拡充</li>
+                                <li>グローバル展開の準備</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技術要件とアーキテクチャ -->
+    <section id="architecture" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>技術要件とアーキテクチャ</h2>
+                <p>システムの技術的構成と要件</p>
+            </div>
+            <div class="architecture-diagram" data-aos="fade-up" data-aos-delay="200">
+                <h3>システムアーキテクチャ</h3>
+                <div class="diagram-container">
+                    <img src="images/architecture.svg" alt="システムアーキテクチャ図" width="100%" height="auto">
+                </div>
+            </div>
+            <div class="tech-stack" data-aos="fade-up" data-aos-delay="400">
+                <h3>技術スタック</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <img src="images/tech-aws.svg" alt="AWS">
+                        <span>AWS</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="images/tech-azure.svg" alt="Azure">
+                        <span>Azure</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="images/tech-kubernetes.svg" alt="Kubernetes">
+                        <span>Kubernetes</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="images/tech-docker.svg" alt="Docker">
+                        <span>Docker</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="images/tech-nodejs.svg" alt="Node.js">
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="images/tech-react.svg" alt="React">
+                        <span>React</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="images/tech-graphql.svg" alt="GraphQL">
+                        <span>GraphQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="images/tech-mongodb.svg" alt="MongoDB">
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+            <div class="security-requirements" data-aos="fade-up" data-aos-delay="600">
+                <h3>セキュリティ要件</h3>
+                <div class="security-grid">
+                    <div class="security-item">
+                        <i class="fas fa-user-lock"></i>
+                        <h4>認証・認可</h4>
+                        <p>多要素認証、シングルサインオン、ロールベースアクセス制御</p>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>データ保護</h4>
+                        <p>転送中および保存時の暗号化、データマスキング</p>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-history"></i>
+                        <h4>監査・ログ</h4>
+                        <p>包括的な監査ログ、不正アクセス検知</p>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-sync"></i>
+                        <h4>可用性</h4>
+                        <p>冗長構成、自動バックアップ、災害復旧計画</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 投資詳細 -->
+    <section id="investment" class="section bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>投資詳細と経済効果</h2>
+                <p>システム導入による投資と経済的メリット</p>
+            </div>
+            <div class="investment-container">
+                <div class="investment-grid">
+                    <div class="investment-chart" data-aos="fade-right" data-aos-delay="200">
+                        <h3>5年間のROI予測</h3>
+                        <div class="chart-container">
+                            <canvas id="roiChart"></canvas>
+                        </div>
+                        <div class="roi-metrics">
+                            <div class="roi-metric-card">
+                                <div class="roi-metric-value">162%</div>
+                                <div class="roi-metric-label">5年目ROI</div>
+                            </div>
+                            <div class="roi-metric-card">
+                                <div class="roi-metric-value">18ヶ月</div>
+                                <div class="roi-metric-label">投資回収期間</div>
+                            </div>
+                            <div class="roi-metric-card">
+                                <div class="roi-metric-value">387%</div>
+                                <div class="roi-metric-label">5年間累積ROI</div>
+                            </div>
+                        </div>
+                        <div class="investment-note">
+                            <p><i class="fas fa-info-circle"></i> 初期投資後、18ヶ月目から黒字化し、5年間で実質的に投資額の3.8倍のリターンが期待できます。</p>
+                            <div class="investment-metric-row">
+                                <div class="investment-metric">
+                                    <div class="metric-icon"><i class="fas fa-chart-line"></i></div>
+                                    <div class="metric-text">年平均成長率: <span>47%</span></div>
+                                </div>
+                                <div class="investment-metric">
+                                    <div class="metric-icon"><i class="fas fa-coins"></i></div>
+                                    <div class="metric-text">5年間純利益: <span>1.3億円</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="investment-chart" data-aos="fade-left" data-aos-delay="400">
+                        <h3>初期投資額の内訳</h3>
+                        <div class="chart-container">
+                            <canvas id="initialInvestmentChart"></canvas>
+                        </div>
+                        <div class="investment-summary">
+                            <div class="summary-item">
+                                <h4>総投資額</h4>
+                                <div class="value">3,500万円</div>
+                            </div>
+                            <div class="timeline-container">
+                                <div class="timeline-bar">
+                                    <div class="timeline-progress" style="width: 35%"></div>
+                                    <div class="timeline-marker" style="left: 35%">
+                                        <span>投資回収</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-labels">
+                                    <div class="timeline-start">初期投資</div>
+                                    <div class="timeline-end">5年後</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="investment-breakdown">
+                            <table class="breakdown-table">
+                                <tr>
+                                    <td>システム導入費</td>
+                                    <td class="text-right">1,500万円</td>
+                                    <td class="text-right">43%</td>
+                                </tr>
+                                <tr>
+                                    <td>カスタマイズ開発</td>
+                                    <td class="text-right">800万円</td>
+                                    <td class="text-right">23%</td>
+                                </tr>
+                                <tr>
+                                    <td>データ移行</td>
+                                    <td class="text-right">600万円</td>
+                                    <td class="text-right">17%</td>
+                                </tr>
+                                <tr>
+                                    <td>トレーニング</td>
+                                    <td class="text-right">400万円</td>
+                                    <td class="text-right">11%</td>
+                                </tr>
+                                <tr>
+                                    <td>コンサルティング</td>
+                                    <td class="text-right">200万円</td>
+                                    <td class="text-right">6%</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="efficiency-container" data-aos="fade-up" data-aos-delay="600">
+                    <h3>業務効率化の数値</h3>
+                    <div class="efficiency-grid">
+                        <div class="efficiency-chart">
+                            <canvas id="efficiencyDetailChart"></canvas>
+                        </div>
+                        <div class="efficiency-metrics">
+                            <div class="efficiency-metric-card">
+                                <div class="efficiency-metric-icon"><i class="fas fa-chart-line"></i></div>
+                                <div class="efficiency-metric-content">
+                                    <div class="efficiency-metric-value">55%</div>
+                                    <div class="efficiency-metric-label">全体的な業務効率化</div>
+                                    <div class="efficiency-metric-desc">主要業務プロセス全体での平均効率向上率</div>
+                                </div>
+                            </div>
+                            <div class="efficiency-metric-card">
+                                <div class="efficiency-metric-icon"><i class="fas fa-clock"></i></div>
+                                <div class="efficiency-metric-content">
+                                    <div class="efficiency-metric-value">72時間/月</div>
+                                    <div class="efficiency-metric-label">時間削減</div>
+                                    <div class="efficiency-metric-desc">月間の作業時間削減効果（部門あたり）</div>
+                                </div>
+                            </div>
+                            <div class="efficiency-metric-card">
+                                <div class="efficiency-metric-icon"><i class="fas fa-users"></i></div>
+                                <div class="efficiency-metric-content">
+                                    <div class="efficiency-metric-value">32%</div>
+                                    <div class="efficiency-metric-label">コミュニケーション効率化</div>
+                                    <div class="efficiency-metric-desc">リモートワーク環境下でのコミュニケーション改善率</div>
+                                </div>
+                            </div>
+                            <div class="efficiency-metric-card">
+                                <div class="efficiency-metric-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                                <div class="efficiency-metric-content">
+                                    <div class="efficiency-metric-value">28%</div>
+                                    <div class="efficiency-metric-label">エラー率低減</div>
+                                    <div class="efficiency-metric-desc">手作業ミスやデータ入力エラーの低減率</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="efficiency-details">
+                        <div class="efficiency-detail-row">
+                            <div class="efficiency-detail-item">
+                                <i class="fas fa-file-alt"></i>
+                                <span>書類作成の自動化で</span>
+                                <strong>65%</strong>
+                                <span>の時間削減</span>
+                            </div>
+                            <div class="efficiency-detail-item">
+                                <i class="fas fa-search"></i>
+                                <span>情報検索時間が</span>
+                                <strong>78%</strong>
+                                <span>短縮</span>
+                            </div>
+                            <div class="efficiency-detail-item">
+                                <i class="fas fa-tasks"></i>
+                                <span>タスク管理効率が</span>
+                                <strong>52%</strong>
+                                <span>向上</span>
+                            </div>
+                            <div class="efficiency-detail-item">
+                                <i class="fas fa-comments"></i>
+                                <span>会議時間が</span>
+                                <strong>43%</strong>
+                                <span>短縮</span>
+                            </div>
+                        </div>
+                        <div class="efficiency-summary-text">
+                            <p>上記の効率化がもたらす年間換算の経済効果は<strong>約8,500万円</strong>と試算。これは現在の年間人件費の約<strong>22%</strong>に相当します。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="investment-details" data-aos="fade-up" data-aos-delay="600">
+                <h3>投資回収計画</h3>
+                <div class="investment-timeline">
+                    <div class="timeline-bar">
+                        <div class="timeline-progress" style="width: 55%;"></div>
+                        <div class="timeline-marker" style="left: 55%;">
+                            <span>投資回収点</span>
+                        </div>
+                    </div>
+                    <div class="timeline-labels">
+                        <div class="timeline-start">導入開始</div>
+                        <div class="timeline-middle">1.8年</div>
+                        <div class="timeline-end">3年</div>
+                    </div>
+                </div>
+                <div class="investment-summary">
+                    <div class="summary-item">
+                        <h4>初期投資額</h4>
+                        <p class="value">5,800万円</p>
+                    </div>
+                    <div class="summary-item">
+                        <h4>年間運用コスト</h4>
+                        <p class="value">980万円</p>
+                    </div>
+                    <div class="summary-item">
+                        <h4>投資回収期間</h4>
+                        <p class="value">1.8年</p>
+                    </div>
+                    <div class="summary-item">
+                        <h4>5年間のROI</h4>
+                        <p class="value">387%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- リスク管理 -->
+    <section id="risk" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>リスク管理</h2>
+                <p>想定されるリスクと対策</p>
+            </div>
+            <div class="risk-matrix" data-aos="fade-up" data-aos-delay="200">
+                <h3>リスクマトリックス</h3>
+                <div class="matrix-container">
+                    <div class="matrix-header-row">
+                        <div class="matrix-empty"></div>
+                        <div class="matrix-header">低影響</div>
+                        <div class="matrix-header">中影響</div>
+                        <div class="matrix-header">高影響</div>
+                    </div>
+                    <div class="matrix-row">
+                        <div class="matrix-header">高確率</div>
+                        <div class="matrix-cell medium" data-risk="ユーザー抵抗">ユーザー抵抗</div>
+                        <div class="matrix-cell high" data-risk="スケジュール遅延">スケジュール遅延</div>
+                        <div class="matrix-cell critical" data-risk="予算超過">予算超過</div>
+                    </div>
+                    <div class="matrix-row">
+                        <div class="matrix-header">中確率</div>
+                        <div class="matrix-cell low" data-risk="軽微な機能不具合">軽微な機能不具合</div>
+                        <div class="matrix-cell medium" data-risk="データ移行の問題">データ移行の問題</div>
+                        <div class="matrix-cell high" data-risk="セキュリティ脆弱性">セキュリティ脆弱性</div>
+                    </div>
+                    <div class="matrix-row">
+                        <div class="matrix-header">低確率</div>
+                        <div class="matrix-cell very-low" data-risk="UI/UX不満">UI/UX不満</div>
+                        <div class="matrix-cell low" data-risk="システム互換性">システム互換性</div>
+                        <div class="matrix-cell medium" data-risk="クラウド障害">クラウド障害</div>
+                    </div>
+                </div>
+            </div>
+            <div class="risk-details" data-aos="fade-up" data-aos-delay="400">
+                <h3>主要リスクと対策</h3>
+                <div class="risk-table-container">
+                    <table class="risk-table">
+                        <thead>
+                            <tr>
+                                <th>リスク</th>
+                                <th>影響度</th>
+                                <th>発生確率</th>
+                                <th>対策</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ユーザー抵抗</td>
+                                <td class="medium">中</td>
+                                <td>高</td>
+                                <td>
+                                    <ul>
+                                        <li>早期からのユーザー参加</li>
+                                        <li>段階的な導入と十分なトレーニング</li>
+                                        <li>成功事例の共有</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>データ移行の問題</td>
+                                <td class="medium">中</td>
+                                <td>中</td>
+                                <td>
+                                    <ul>
+                                        <li>詳細なデータマッピング</li>
+                                        <li>段階的な移行と検証</li>
+                                        <li>ロールバック計画の策定</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>セキュリティ脆弱性</td>
+                                <td class="high">高</td>
+                                <td>中</td>
+                                <td>
+                                    <ul>
+                                        <li>セキュリティ専門家によるレビュー</li>
+                                        <li>定期的な脆弱性スキャン</li>
+                                        <li>セキュリティインシデント対応計画</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>予算超過</td>
+                                <td class="critical">極高</td>
+                                <td>高</td>
+                                <td>
+                                    <ul>
+                                        <li>詳細な予算計画と定期的な見直し</li>
+                                        <li>段階的な実装とマイルストーン管理</li>
+                                        <li>予備費の確保（総予算の15%）</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成功指標と評価方法 -->
+    <section id="kpi" class="section bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>成功指標と評価方法</h2>
+                <p>プロジェクト成功を測定するKPI</p>
+            </div>
+            <div class="kpi-dashboard" data-aos="fade-up" data-aos-delay="200">
+                <h3>KPIダッシュボード</h3>
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-title">プロジェクト完了率</div>
+                        <div class="gauge-container">
+                            <div class="gauge">
+                                <div class="gauge-fill" style="transform: rotate(126deg);"></div>
+                            </div>
+                            <div class="gauge-center">
+                                <span class="gauge-value">70</span><span class="gauge-percent">%</span>
+                            </div>
+                        </div>
+                        <div class="kpi-target">目標: 100%</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-title">ユーザー満足度</div>
+                        <div class="gauge-container">
+                            <div class="gauge">
+                                <div class="gauge-fill" style="transform: rotate(144deg);"></div>
+                            </div>
+                            <div class="gauge-center">
+                                <span class="gauge-value">80</span><span class="gauge-percent">%</span>
+                            </div>
+                        </div>
+                        <div class="kpi-target">目標: 90%</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-title">システム稼働率</div>
+                        <div class="gauge-container">
+                            <div class="gauge">
+                                <div class="gauge-fill" style="transform: rotate(171deg);"></div>
+                            </div>
+                            <div class="gauge-center">
+                                <span class="gauge-value">95</span><span class="gauge-percent">%</span>
+                            </div>
+                        </div>
+                        <div class="kpi-target">目標: 99.9%</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-title">コスト削減</div>
+                        <div class="gauge-container">
+                            <div class="gauge">
+                                <div class="gauge-fill" style="transform: rotate(108deg);"></div>
+                            </div>
+                            <div class="gauge-center">
+                                <span class="gauge-value">60</span><span class="gauge-percent">%</span>
+                            </div>
+                        </div>
+                        <div class="kpi-target">目標: 75%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="evaluation-cycle" data-aos="fade-up" data-aos-delay="400">
+                <h3>評価サイクル</h3>
+                <div class="cycle-diagram">
+                    <div class="cycle-item">
+                        <div class="cycle-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="cycle-text">目標設定</div>
+                    </div>
+                    <div class="cycle-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="cycle-item">
+                        <div class="cycle-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="cycle-text">データ収集</div>
+                    </div>
+                    <div class="cycle-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="cycle-item">
+                        <div class="cycle-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="cycle-text">分析</div>
+                    </div>
+                    <div class="cycle-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="cycle-item">
+                        <div class="cycle-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <div class="cycle-text">改善</div>
+                    </div>
+                    <div class="cycle-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="cycle-item">
+                        <div class="cycle-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="cycle-text">検証</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ケーススタディ -->
+    <section id="case-studies" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>ケーススタディ</h2>
+                <p>同様のシステムを導入した企業の成功事例</p>
+            </div>
+            <div class="case-studies-carousel" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="case-study-card">
+                                <div class="case-logo">
+                                    <img src="images/case-logo-1.png" alt="企業ロゴ1">
+                                </div>
+                                <h3>大手自動車部品メーカーA社</h3>
+                                <div class="case-results">
+                                    <div class="result-item">
+                                        <div class="result-value">42%</div>
+                                        <div class="result-label">プロジェクト管理効率化</div>
+                                    </div>
+                                    <div class="result-item">
+                                        <div class="result-value">2,300万円</div>
+                                        <div class="result-label">年間コスト削減</div>
+                                    </div>
+                                </div>
+                                <div class="case-quote">
+                                    <i class="fas fa-quote-left"></i>
+                                    <p>グローバルに展開する複数プロジェクトの一元管理が可能になり、意思決定のスピードが格段に向上しました。</p>
+                                    <div class="quote-author">- CIO 山田太郎氏</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="case-study-card">
+                                <div class="case-logo">
+                                    <img src="images/case-logo-2.png" alt="企業ロゴ2">
+                                </div>
+                                <h3>エンジニアリングコンサルティングB社</h3>
+                                <div class="case-results">
+                                    <div class="result-item">
+                                        <div class="result-value">65%</div>
+                                        <div class="result-label">文書検索時間削減</div>
+                                    </div>
+                                    <div class="result-item">
+                                        <div class="result-value">28%</div>
+                                        <div class="result-label">顧客満足度向上</div>
+                                    </div>
+                                </div>
+                                <div class="case-quote">
+                                    <i class="fas fa-quote-left"></i>
+                                    <p>リモートワーク環境下でも、チーム間のコラボレーションが円滑に行えるようになり、生産性が大幅に向上しました。</p>
+                                    <div class="quote-author">- プロジェクトマネージャー 佐藤花子氏</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="case-study-card">
+                                <div class="case-logo">
+                                    <img src="images/case-logo-3.png" alt="企業ロゴ3">
+                                </div>
+                                <h3>自動車設計C社</h3>
+                                <div class="case-results">
+                                    <div class="result-item">
+                                        <div class="result-value">35%</div>
+                                        <div class="result-label">開発期間短縮</div>
+                                    </div>
+                                    <div class="result-item">
+                                        <div class="result-value">3,500万円</div>
+                                        <div class="result-label">年間人件費削減</div>
+                                    </div>
+                                </div>
+                                <div class="case-quote">
+                                    <i class="fas fa-quote-left"></i>
+                                    <p>データ駆動型の意思決定が可能になり、プロジェクトの遅延リスクを大幅に低減できました。予測精度も向上しています。</p>
+                                    <p>データ駆動型の意思決定が可能になり、プロジェクトの遅延リスクを大幅に低減できました。予測精度も向上しています。</p>
+                                    <div class="quote-author">- 技術部長 鈴木一郎氏</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問 -->
+    <section id="faq" class="section bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>よくある質問</h2>
+                <p>システム導入に関する疑問にお答えします</p>
+            </div>
+            <div class="faq-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>既存システムとの統合は可能ですか？</h3>
+                            <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>はい、本システムは標準的なAPIを提供しており、既存のERPシステム、CADツール、会計システムなど様々なシステムと連携可能です。移行期間中は両システムを並行稼働させることも可能で、段階的な移行をサポートします。</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>導入にあたって社内のITリソースはどの程度必要ですか？</h3>
+                            <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>導入初期段階ではプロジェクトマネージャー1名と技術担当者1-2名の関与が理想的です。ただし、当社の専任チームが主導するため、最小限のリソースでも導入可能です。運用フェーズでは、システム管理者1名程度で十分対応可能です。</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>データセキュリティはどのように確保されますか？</h3>
+                            <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>本システムは、転送中および保存時のデータ暗号化、多要素認証、ロールベースのアクセス制御、詳細な監査ログなど、業界最高水準のセキュリティ対策を実装しています。また、ISO 27001、GDPR、その他の業界規制に準拠しており、定期的なセキュリティ監査を実施しています。</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>オフライン環境でも利用できますか？</h3>
+                            <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>はい、オフラインモードをサポートしています。インターネット接続がない環境でも基本機能を利用でき、接続回復時に自動的にデータが同期されます。また、特に厳格なセキュリティ要件がある場合は、プライベートクラウドやオンプレミス環境での展開も可能です。</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>カスタマイズの範囲と費用はどの程度ですか？</h3>
+                            <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>システムは高度にカスタマイズ可能で、ユーザーインターフェース、ワークフロー、レポート、統合機能など様々な側面を御社の要件に合わせて調整できます。基本的なカスタマイズは初期導入費用に含まれており、より複雑なカスタマイズについては要件に応じて個別に見積もりを提供します。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 次のステップ -->
+    <section id="next-steps" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>次のステップ</h2>
+                <p>プロジェクト推進のためのアクションプラン</p>
+            </div>
+            <div class="steps-timeline" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-step">
+                    <div class="step-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>キックオフミーティング</h3>
+                        <p>主要ステークホルダーとの初回会議で詳細要件を確認</p>
+                        <div class="step-date">2週間以内</div>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>詳細要件分析</h3>
+                        <p>現行システム分析とギャップ評価の実施</p>
+                        <div class="step-date">1ヶ月以内</div>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>プロトタイプ開発</h3>
+                        <p>主要機能のプロトタイプ開発とフィードバック収集</p>
+                        <div class="step-date">2-3ヶ月以内</div>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>最終提案と契約</h3>
+                        <p>詳細な実装計画と契約締結</p>
+                        <div class="step-date">4ヶ月以内</div>
+                    </div>
+                </div>
+            </div>
+            <div class="action-cta" data-aos="fade-up" data-aos-delay="400">
+                <h3>今すぐアクションを起こしましょう</h3>
+                <p>デモンストレーションのご予約や詳細なお見積りのご依頼は下記よりお問い合わせください。</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">お問い合わせ</a>
+                    <a href="#demo" class="btn btn-secondary">デモを予約する</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせ -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>お問い合わせ</h2>
+                <p>ご質問やご相談はこちらから</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>所在地</h3>
+                        <p>〒100-0001<br>東京都千代田区千代田1-1-1<br>千代田ビル10階</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>電話番号</h3>
+                        <p>03-1234-5678</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>メールアドレス</h3>
+                        <p>info@example.com</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left" data-aos-delay="400">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">お名前 <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">会社名 <span class="required">*</span></label>
+                            <input type="text" id="company" name="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">メールアドレス <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">電話番号</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <span class="checkmark"></span>
+                                プライバシーポリシーに同意します
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">送信する</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <img src="images/logo-white.png" alt="ロゴ">
+                    <p>次世代クラウドベースプロジェクト管理システム</p>
+                </div>
+                <div class="footer-links">
+                    <h3>クイックリンク</h3>
+                    <ul>
+                        <li><a href="#summary">エグゼクティブサマリー</a></li>
+                        <li><a href="#features">機能と特徴</a></li>
+                        <li><a href="#roadmap">ロードマップ</a></li>
+                        <li><a href="#investment">投資計画</a></li>
+                        <li><a href="#case-studies">ケーススタディ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>リソース</h3>
+                    <ul>
+                        <li><a href="#">ホワイトペーパー</a></li>
+                        <li><a href="#">デモ動画</a></li>
+                        <li><a href="#">技術仕様書</a></li>
+                        <li><a href="#">よくある質問</a></li>
+                        <li><a href="#">ブログ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>ニュースレター登録</h3>
+                    <p>最新情報をメールでお届けします</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="メールアドレスを入力">
+                        <button type="submit" class="btn btn-sm">登録</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 プロジェクト管理クラウド. All Rights Reserved.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">プライバシーポリシー</a>
+                    <a href="#">利用規約</a>
+                    <a href="#">サイトマップ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Swiperの初期化状態を確認する
+        window.addEventListener('load', function() {
+            console.log('Window fully loaded - checking Swiper elements');
+            const swiperElements = {
+                container: document.querySelector('.swiper-container'),
+                wrapper: document.querySelector('.swiper-wrapper'),
+                slides: document.querySelectorAll('.swiper-slide'),
+                nextButton: document.querySelector('.swiper-button-next'),
+                prevButton: document.querySelector('.swiper-button-prev'),
+                pagination: document.querySelector('.swiper-pagination')
+            };
+            
+            console.log('Swiper elements check:', {
+                container: swiperElements.container ? 'Found' : 'Not found',
+                wrapper: swiperElements.wrapper ? 'Found' : 'Not found',
+                slides: swiperElements.slides.length + ' slides found',
+                nextButton: swiperElements.nextButton ? 'Found' : 'Not found',
+                prevButton: swiperElements.prevButton ? 'Found' : 'Not found',
+                pagination: swiperElements.pagination ? 'Found' : 'Not found'
+            });
+            
+            // Swiperがまだ初期化されていない場合に手動で初期化
+            if (swiperElements.container && typeof Swiper !== 'undefined' && !swiperElements.container.swiper) {
+                console.log('Manually initializing Swiper');
+                try {
+                    const swiper = new Swiper('.swiper-container', {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                        loop: true,
+                        autoplay: {
+                            delay: 5000,
+                            disableOnInteraction: false
+                        },
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev'
+                        },
+                        breakpoints: {
+                            768: {
+                                slidesPerView: 2
+                            },
+                            1024: {
+                                slidesPerView: 3
+                            }
+                        }
+                    });
+                    console.log('Swiper manually initialized successfully');
+                } catch (error) {
+                    console.error('Error manually initializing Swiper:', error);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

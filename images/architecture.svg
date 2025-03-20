@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500">
+  <!-- クラウド環境 -->
+  <g transform="translate(500, 100)" fill="#f8f9fa" stroke="#0056b3" stroke-width="2">
+    <path d="M-200,-50 Q-150,-100 -100,-50 Q-50,-100 0,-50 Q50,-100 100,-50 Q150,-100 200,-50 Q250,0 200,50 Q250,100 200,150 Q150,200 100,150 Q50,200 0,150 Q-50,200 -100,150 Q-150,200 -200,150 Q-250,100 -200,50 Q-250,0 -200,-50 Z" />
+    <text x="0" y="0" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="24" fill="#0056b3">クラウド環境</text>
+  </g>
+  
+  <!-- フロントエンド -->
+  <g transform="translate(300, 300)">
+    <rect x="-100" y="-50" width="200" height="100" rx="10" ry="10" fill="#00a0e9" stroke="#0056b3" stroke-width="2" />
+    <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="white">フロントエンド</text>
+    <text x="0" y="30" text-anchor="middle" dominant-baseline="middle" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="white">React / Vue.js</text>
+  </g>
+  
+  <!-- バックエンド -->
+  <g transform="translate(500, 300)">
+    <rect x="-100" y="-50" width="200" height="100" rx="10" ry="10" fill="#0056b3" stroke="#003366" stroke-width="2" />
+    <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="white">バックエンド</text>
+    <text x="0" y="30" text-anchor="middle" dominant-baseline="middle" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="white">Node.js / GraphQL</text>
+  </g>
+  
+  <!-- データベース -->
+  <g transform="translate(700, 300)">
+    <rect x="-100" y="-50" width="200" height="100" rx="10" ry="10" fill="#28a745" stroke="#1e7e34" stroke-width="2" />
+    <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="white">データベース</text>
+    <text x="0" y="30" text-anchor="middle" dominant-baseline="middle" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="white">MongoDB / PostgreSQL</text>
+  </g>
+  
+  <!-- 接続線 -->
+  <g stroke="#666" stroke-width="3" stroke-dasharray="5,5">
+    <!-- クラウドからフロントエンド -->
+    <line x1="400" y1="150" x2="300" y2="250" />
+    <!-- クラウドからバックエンド -->
+    <line x1="500" y1="150" x2="500" y2="250" />
+    <!-- クラウドからデータベース -->
+    <line x1="600" y1="150" x2="700" y2="250" />
+    <!-- フロントエンドからバックエンド -->
+    <line x1="400" y1="300" x2="400" y2="300" />
+    <!-- バックエンドからデータベース -->
+    <line x1="600" y1="300" x2="600" y2="300" />
+  </g>
+  
+  <!-- ユーザー -->
+  <g transform="translate(150, 400)">
+    <circle cx="0" cy="-30" r="20" fill="#f8f9fa" stroke="#343a40" stroke-width="2" />
+    <path d="M-15,0 L15,0 M0,-30 L0,30 M-15,30 L15,30" stroke="#343a40" stroke-width="2" fill="none" />
+    <text x="0" y="60" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#343a40">ユーザー</text>
+  </g>
+  
+  <!-- ユーザーからフロントエンドへの接続 -->
+  <g stroke="#666" stroke-width="3">
+    <line x1="180" y1="400" x2="250" y2="300" stroke-dasharray="none" marker-end="url(#arrowhead)" />
+  </g>
+  
+  <!-- 矢印マーカー -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+  </defs>
+  
+  <!-- 外部システム連携 -->
+  <g transform="translate(850, 400)">
+    <rect x="-80" y="-40" width="160" height="80" rx="10" ry="10" fill="#ff5722" stroke="#d84315" stroke-width="2" />
+    <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="white">外部システム連携</text>
+    <text x="0" y="25" text-anchor="middle" dominant-baseline="middle" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="white">API / Webhook</text>
+  </g>
+  
+  <!-- データベースから外部システムへの接続 -->
+  <g stroke="#666" stroke-width="3" stroke-dasharray="5,5">
+    <line x1="750" y1="350" x2="800" y2="380" />
+  </g>
+  
+  <!-- セキュリティレイヤー -->
+  <g transform="translate(500, 450)">
+    <rect x="-350" y="-20" width="700" height="40" rx="5" ry="5" fill="rgba(220, 53, 69, 0.2)" stroke="#dc3545" stroke-width="2" stroke-dasharray="10,5" />
+    <text x="0" y="5" text-anchor="middle" dominant-baseline="middle" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#dc3545">セキュリティレイヤー（認証・認可・暗号化・監査ログ）</text>
+  </g>
+</svg>
